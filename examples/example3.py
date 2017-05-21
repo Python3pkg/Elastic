@@ -60,9 +60,9 @@ calc.set(prec = 'Accurate',
 # Not all calculators have this type of internal minimizer!
 calc.set(isif=3)
 
-print "Running initial optimization ... ",
-print "Residual pressure: %.3f bar" % (
-            cryst.get_isotropic_pressure(cryst.get_stress()))
+print("Running initial optimization ... ", end=' ')
+print("Residual pressure: %.3f bar" % (
+            cryst.get_isotropic_pressure(cryst.get_stress())))
 
 # Clean up the directory
 calc.clean()
@@ -72,7 +72,7 @@ calc.set(isif=2)
 
 # Elastic tensor by internal routine
 Cij, Bij=cryst.get_elastic_tensor(n=5,d=0.2)
-print "Cij (GPa):", Cij/units.GPa
+print("Cij (GPa):", Cij/units.GPa)
 
 
 # Now let us do it (only c11 and c12) by hand 
@@ -112,7 +112,7 @@ f=numpy.polyfit(ss[:,0,0],ss[:,1,1],3)
 c12=f[-2]/units.GPa
 plt.plot(xa,numpy.polyval(f,xa),'g-')
 
-print 'C11 = %.3f GPa, C12 = %.3f GPa => K= %.3f GPa' % (c11, c12, (c11+2*c12)/3)
+print('C11 = %.3f GPa, C12 = %.3f GPa => K= %.3f GPa' % (c11, c12, (c11+2*c12)/3))
 
 plt.show()
 

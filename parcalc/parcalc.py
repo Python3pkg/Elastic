@@ -43,7 +43,7 @@ Class description
 """""""""""""""""
 '''
 
-from __future__ import print_function, division
+
 
 import ase
 from ase.calculators.vasp import Vasp
@@ -52,7 +52,7 @@ from ase.calculators.siesta import Siesta
 try :  # Python3
     from queue import Empty
 except ImportError : # Python2
-    from Queue import Empty
+    from queue import Empty
     
 from multiprocessing import Process, Queue
 

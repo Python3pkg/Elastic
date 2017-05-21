@@ -41,8 +41,8 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Elastic'
-copyright = u'2015, Paweł T. Jochym'
+project = 'Elastic'
+copyright = '2015, Paweł T. Jochym'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -181,8 +181,8 @@ latex_paper_size = 'a4'
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('index', 'Elastic.tex', u'Elastic',
-   u'Paweł T. Jochym', 'manual'),
+  ('index', 'Elastic.tex', 'Elastic',
+   'Paweł T. Jochym', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -214,18 +214,18 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'elastic', u'Elastic Documentation',
-     [u'Paweł T. Jochym'], 1)
+    ('index', 'elastic', 'Elastic Documentation',
+     ['Paweł T. Jochym'], 1)
 ]
 
 
 # -- Options for Epub output ---------------------------------------------------
 
 # Bibliographic Dublin Core info.
-epub_title = u'Elastic'
-epub_author = u'Paweł T. Jochym'
-epub_publisher = u'Paweł T. Jochym'
-epub_copyright = u'2015, Paweł T. Jochym'
+epub_title = 'Elastic'
+epub_author = 'Paweł T. Jochym'
+epub_publisher = 'Paweł T. Jochym'
+epub_copyright = '2015, Paweł T. Jochym'
 
 # The language of the text. It defaults to the language option
 # or en if the language is not set.

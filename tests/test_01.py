@@ -1,6 +1,6 @@
 # Test case for the code. Calculate few well-known crystals
 
-from __future__ import print_function, division
+
 
 import os
 import sys

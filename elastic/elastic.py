@@ -65,7 +65,7 @@ Class description
 """""""""""""""""
 '''
 
-from __future__ import print_function, division, absolute_import
+
 
 import re
 import sys
@@ -493,7 +493,7 @@ class ElasticCrystal:
             ul.append(g.get_strain(self))
             # Remove the pressure from the stress tensor
             sl.append(g.get_stress()-array([p,p,p,0,0,0]))
-        eqm=array(map(symm,ul))
+        eqm=array(list(map(symm,ul)))
         #print(eqm[0].shape, eqm.shape)
         eqm=reshape(eqm,(eqm.shape[0]*eqm.shape[1],eqm.shape[2]))
         #print(eqm)

@@ -71,15 +71,15 @@ if __name__ == '__main__':
         calc.set(isif=3)
         
         # Run the internal optimizer
-        print("Residual pressure: %.3f GPa" % (
-                    (cryst.get_stress()[:3]).mean()/units.GPa))
-        print("Residual stress (GPa):", cryst.get_stress()/units.GPa)
+        print(("Residual pressure: %.3f GPa" % (
+                    (cryst.get_stress()[:3]).mean()/units.GPa)))
+        print(("Residual stress (GPa):", cryst.get_stress()/units.GPa))
 
         calc.clean()
         cryst.get_lattice_type()
 
-        print(cryst.get_vecang_cell())
-        print(cryst.bravais, cryst.sg_type, cryst.sg_name, cryst.sg_nr)
+        print((cryst.get_vecang_cell()))
+        print((cryst.bravais, cryst.sg_type, cryst.sg_name, cryst.sg_nr))
         
         #view(cryst)
 
@@ -97,8 +97,8 @@ if __name__ == '__main__':
         pv=pv[pv[:,0].argsort()]
         
         # Print the fitted parameters
-        print("V0=%.3f A^3 ; B0=%.2f GPa ; B0'=%.3f ; a0=%.5f A" % ( 
-                fit[0], fit[1]/units.GPa, fit[2], pow(fit[0],1./3)))
+        print(("V0=%.3f A^3 ; B0=%.2f GPa ; B0'=%.3f ; a0=%.5f A" % ( 
+                fit[0], fit[1]/units.GPa, fit[2], pow(fit[0],1./3))))
                 
         v0=fit[0]
 
@@ -141,7 +141,7 @@ if __name__ == '__main__':
 
         # Elastic tensor by internal routine
         Cij, Bij=cryst.get_elastic_tensor(n=5,d=0.33)
-        print("Cij (GPa):", Cij/units.GPa)
+        print(("Cij (GPa):", Cij/units.GPa))
         
         calc.clean()
         
@@ -177,7 +177,7 @@ if __name__ == '__main__':
         f=numpy.polyfit(ss[:,0,0],ss[:,1,1],3)
         c12=f[-2]/units.GPa
         plot(xa,numpy.polyval(f,xa),'g-')
-        print('C11 = %.3f GPa, C12 = %.3f GPa => K= %.3f GPa (cubic only)' % (c11, c12, (c11+2*c12)/3))
+        print(('C11 = %.3f GPa, C12 = %.3f GPa => K= %.3f GPa (cubic only)' % (c11, c12, (c11+2*c12)/3)))
         axvline(0,ls='--')
         axhline(0,ls='--')
         draw()

@@ -57,9 +57,9 @@ calc.set(prec = 'Accurate',
 # Full structure optimization in this case.
 # Not all calculators have this type of internal minimizer!
 calc.set(isif=3)
-print "Running initial optimization ... ",
-print "Residual pressure: %.3f bar" % (
-            cryst.get_isotropic_pressure(cryst.get_stress()))
+print("Running initial optimization ... ", end=' ')
+print("Residual pressure: %.3f bar" % (
+            cryst.get_isotropic_pressure(cryst.get_stress())))
 
 # Lets extract optimized lattice constant.
 # MgO is cubic so a is a first diagonal element of lattice matrix
@@ -82,8 +82,8 @@ pv=array(cryst.pv)
 pv=pv[pv[:,0].argsort()]
 
 # Print just fitted parameters
-print "V0=%.3f A^3 ; B0=%.2f GPa ; B0'=%.3f ; a0=%.5f A" % ( 
-        fit[0], fit[1]/units.GPa, fit[2], pow(fit[0],1./3))
+print("V0=%.3f A^3 ; B0=%.2f GPa ; B0'=%.3f ; a0=%.5f A" % ( 
+        fit[0], fit[1]/units.GPa, fit[2], pow(fit[0],1./3)))
         
 v0=fit[0]
 
